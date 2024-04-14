@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+   <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="page" href="#">planon</a>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav flex-grow-1 pe-3">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Settings
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#" onclick="restoreTasks()">Restaurer les tâches</a></li>
+                            <li>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="restoreToggle">
+                                    <label class="form-check-label" for="restoreToggle">Activer/Désactiver la restauration</label>
+                                </div>
+                            </li>
+                            <!-- Correctement placé sous-menu pour la sauvegarde -->
+                            <li><a class="dropdown-item" href="#" onclick="downloadTasks()">Sauvegarde tous</a> 
+                            
+                            </li>
+                            
+                     </ul>
+                    </li>
+                </ul>
+                <div class="info">
+                  
+               
+                    </div>
+                  
+                </div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <h1 class="text-center">Ma Liste de Tâches</h1>
+    <div class="input-group mb-3">
+        <input type="text" id="taskInput" class="form-control" placeholder="Nouvelle tâche...">
+        <!-- Bouton modifié pour inclure l'icône SVG -->
+        <button class="btn btn-success" onclick="addTask()">
+            <!-- Intégration du SVG directement dans le bouton -->
+            <?xml version="1.0" ?>
+            <svg enable-background="new 0 0 512 512" height="20px" width="20px" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="M256,512C114.625,512,0,397.391,0,256C0,114.609,114.625,0,256,0c141.391,0,256,114.609,256,256  C512,397.391,397.391,512,256,512z M256,64C149.969,64,64,149.969,64,256s85.969,192,192,192c106.047,0,192-85.969,192-192  S362.047,64,256,64z M288,384h-64v-96h-96v-64h96v-96h64v96h96v64h-96V384z" />
+            </svg>
+        </button>
+    </div>
+    <ul id="taskList" class="list-group">
+    <!-- Les tâches ajoutées apparaîtront ici -->
+</ul>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

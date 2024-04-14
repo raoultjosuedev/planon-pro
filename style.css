@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Rubik-Bold';
+  src: url('Rubik-Bold.ttf');
+}
+@font-face {
+  font-family: 'Lora-Bold';
+  src: url('Lora-Bold.ttf');
+}
+ @font-face {
+   font-family: 'Ubuntu';
+   src: url('Ubuntu-B.ttf') format('truetype');
+   font-weight: bold;
+ }
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.page:hover{
+ font-family: 'Ubuntu';
+ background: #42445A;
+ padding:0.5em;
+ text-decoration: none;color:white;
+ border-radius: 20px;
+ margin:0;
+}
+.page{
+  color:#42445A;
+  background: transparent;
+  font-family: 'Ubuntu';text-decoration: none;padding:0.5em;
+  margin:0;
+}
+.text-center{
+    font-family: "ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+#offcanvasRightLabel{
+  font-family: 'ubuntu';
+}
+.info{
+  font-family: 'Lora-Bold';
+  font-weight: lighter;
+}
+#taskInput{
+  font-family: 'sans-serif';
+}
+.dropdown-item{
+  border:2px solid #42445A;
+}
